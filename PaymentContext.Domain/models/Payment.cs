@@ -1,20 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PaymentContext.Domain.ValueObject;
+using PaymentContext.Shared.Models;
 
-namespace PaymentContext.Domain.model
+namespace PaymentContext.Domain.models
 {
-    public abstract class Payment
+    public abstract class Payment : Model
     {
-        protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, string payer, string document, string address, string email)
+        protected Payment(DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, string namePayer, Document document, Address address, Email email)
         {
             Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10);
             PaidDate = paidDate;
             ExpireDate = expireDate;
             Total = total;
             TotalPaid = totalPaid;
-            Payer = payer;
+            NamePayer = namePayer;
             Document = document;
             Address = address;
             Email = email;
@@ -25,9 +23,9 @@ namespace PaymentContext.Domain.model
         public DateTime ExpireDate { get; private set; }
         public decimal Total { get; private set; }
         public decimal TotalPaid { get; private set; }
-        public string Payer { get; private set; } = null!;
-        public string Document { get; private set; }  = null!;
-        public string Address { get; private set; }  = null!;
-        public string Email { get; private set; }  = null!;
+        public string NamePayer { get; private set; } = null!;
+        public Document Document { get; private set; }
+        public Address Address { get; private set; }  = null!;
+        public Email Email { get; private set; }  = null!;
     }
 }

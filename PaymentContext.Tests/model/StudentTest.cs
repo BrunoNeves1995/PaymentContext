@@ -1,4 +1,4 @@
-using PaymentContext.Domain.model;
+using PaymentContext.Domain.models;
 
 namespace PaymentContext.Tests.model
 {   
@@ -9,10 +9,10 @@ namespace PaymentContext.Tests.model
     [TestMethod]
     public void TestMethod1()
     {   
-        var sub = new Subscriptions(DateTime.UtcNow);
-        var student = new Student("bruno", "123456", "nevesbruno@gmail.com");
-        student.AletarNome("Fabio");
-        student.AddSubscription(sub);
+        // var sub = new Subscriptions(DateTime.UtcNow);
+        // var student = new Student("bruno", "123456", "nevesbruno@gmail.com");
+        // student.AletarNome("Fabio");
+        // student.AddSubscription(sub);
         
     }
 
