@@ -1,6 +1,8 @@
+using Flunt.Notifications;
+
 namespace PaymentContext.Shared.Models
 {
-    public abstract class Model
+    public abstract class Model : Notifiable<Notification>
     {
         protected Model()
         {

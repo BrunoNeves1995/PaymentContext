@@ -1,3 +1,4 @@
+using PaymentContext.Domain.models.Contracts.Boleto;
 using PaymentContext.Domain.ValueObject;
 
 namespace PaymentContext.Domain.models
@@ -13,7 +14,7 @@ namespace PaymentContext.Domain.models
             decimal totalPaid,
             string payer,
             Document document,
-            Address address,
+            Addres address,
             Email email) : base(
                 paidDate,
                 expireDate,
@@ -27,6 +28,8 @@ namespace PaymentContext.Domain.models
         {
             BarCode = barCode;
             BoletoNumber = boletoNumber;
+
+            AddNotifications(new CreateBoletoPaymentContract(this));
         }
 
         public string BarCode { get; private set; } = null!;

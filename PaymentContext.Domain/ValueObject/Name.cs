@@ -1,3 +1,4 @@
+using PaymentContext.Domain.ValueObject.Contracts.Names;
 using PaymentContext.Shared.ValueObjects;
 
 namespace PaymentContext.Domain.ValueObject
@@ -8,6 +9,8 @@ namespace PaymentContext.Domain.ValueObject
         {
             FirstName = firstName;
             LastName = lastName;
+
+            AddNotifications(new CreateNameContract(this));
         }
 
         public string FirstName { get; private set; } = null!;

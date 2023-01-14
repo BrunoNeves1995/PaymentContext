@@ -1,3 +1,4 @@
+using PaymentContext.Domain.models.Contracts.PayPal;
 using PaymentContext.Domain.ValueObject;
 
 namespace PaymentContext.Domain.models
@@ -12,7 +13,7 @@ namespace PaymentContext.Domain.models
             decimal totalPaid,
             string payer,
             Document document,
-            Address address,
+            Addres address,
             Email email) : base(
                 paidDate,
                 expireDate,
@@ -25,6 +26,8 @@ namespace PaymentContext.Domain.models
             )
         {
             TransactionCode = transactionCode;
+
+            AddNotifications(new CreatePayPalPaymentContract(this));
         }
 
         public string TransactionCode { get; private set; } = null!;

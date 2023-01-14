@@ -102,3 +102,4 @@ C:\Dev\Dominios_Ricos\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\Payme
 C:\Dev\Dominios_Ricos\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\PaymentContext.Shared.dll
 C:\Dev\Dominios_Ricos\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\PaymentContext.Shared.pdb
 C:\Dev\Dominios_Ricos\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\PaymentContext.Domain.pdb
+C:\Dev\Dominios_Ricos\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\Flunt.dll

@@ -1,10 +1,11 @@
+using PaymentContext.Domain.ValueObject.Contracts.Address;
 using PaymentContext.Shared.ValueObjects;
 
 namespace  PaymentContext.Domain.ValueObject 
 {
-    public class Address : ObjetoValor
+    public class Addres : ObjetoValor
     {
-        public Address(string street, string number, string neighborhood, string city, string state, string country, string zipCode)
+        public Addres(string street, string number, string neighborhood, string city, string state, string country, string zipCode)
         {
             Street = street;
             Number = number;
@@ -13,6 +14,8 @@ namespace  PaymentContext.Domain.ValueObject
             State = state;
             Country = country;
             ZipCode = zipCode;
+
+            AddNotifications(new CreateAddressContract(this));
         }
 
         public string Street { get; private set; } = null!;

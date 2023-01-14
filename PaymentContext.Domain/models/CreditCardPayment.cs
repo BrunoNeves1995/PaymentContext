@@ -1,3 +1,4 @@
+using PaymentContext.Domain.models.Contracts.CredCard;
 using PaymentContext.Domain.ValueObject;
 
 namespace PaymentContext.Domain.models
@@ -14,7 +15,7 @@ namespace PaymentContext.Domain.models
             decimal totalPaid,
             string payer,
             Document document,
-            Address address,
+            Addres address,
             Email email) : base(
                 paidDate,
                 expireDate,
@@ -29,6 +30,8 @@ namespace PaymentContext.Domain.models
             CardHolderName = cardHolderName;
             CardNumber = cardNumber;
             LastTransactionNumber = lastTransactionNumber;
+
+            AddNotifications(new CreateCredCardPaymentContract(this));
         }
 
         public string CardHolderName { get; private set; } = null!;
