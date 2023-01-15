@@ -77,6 +77,10 @@
       }
       
 
+  ### Command
+  
+  - Command -> Sâo informaçoes que recebemos de json que contem as informações necessarias para criação de qualquer objto
+  - query -> leitura
     
    
   
