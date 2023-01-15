@@ -18,7 +18,7 @@ namespace PaymentContext.Domain.ValueObject
             AddNotifications(new CreateDocumentContract(this));
         }
 
-        public string Number { get; private set; } = null!;
+        public string Number { get; private set; }
         public EDocumentType Type { get; private set; }
 
         public void AletarDocumento(string number)

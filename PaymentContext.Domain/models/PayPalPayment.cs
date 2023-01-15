@@ -30,6 +30,6 @@ namespace PaymentContext.Domain.models
             AddNotifications(new CreatePayPalPaymentContract(this));
         }
 
-        public string TransactionCode { get; private set; } = null!;
+        public string TransactionCode { get; private set; }
     }
 }

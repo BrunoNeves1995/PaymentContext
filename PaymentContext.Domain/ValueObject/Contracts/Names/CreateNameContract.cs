@@ -7,10 +7,10 @@ namespace PaymentContext.Domain.ValueObject.Contracts.Names
         public CreateNameContract(Name name)
         {
              Requires()
-                .IsNullOrEmpty(name.FirstName, "FirstName", "Nome inválido")
-                .IsMinValue(3 ,"name.FirstName", "Nome deve conter pelo menos 3 caracteres")
-                .IsNullOrEmpty(name.LastName, "LastName", "Sobre nome inválido")
-                .IsMaxValue(40 ,"name.FirstName", "Nome deve conter pelo menos 3 caracteres");
+                .IsNotNullOrEmpty(name.FirstName, "Name.FirstName", "Nome inválido")
+                // .IsMinValue(3 ,"name.FirstName", "Nome deve conter pelo menos 3 caracteres")
+                .IsNotNullOrEmpty(name.LastName, "Name.LastName", "Sobre nome inválido");
+                // .IsMaxValue(40 ,"name.FirstName", "Nome deve conter pelo menos 3 caracteres");
         }
     }
 }

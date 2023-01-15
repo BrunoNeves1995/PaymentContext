@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "PaymentContext.Tests/1.0.0": {
         "dependencies": {
+          "Flunt": "2.0.5",
           "MSTest.TestAdapter": "2.2.10",
           "MSTest.TestFramework": "2.2.10",
           "Microsoft.NET.Test.Sdk": "17.3.2",

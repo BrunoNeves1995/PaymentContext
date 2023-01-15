@@ -13,8 +13,8 @@ namespace PaymentContext.Domain.ValueObject
             AddNotifications(new CreateNameContract(this));
         }
 
-        public string FirstName { get; private set; } = null!;
-        public string LastName { get; private set; } = null!;
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
 
         public void AlterarNome(string firstName, string lastName){
             FirstName = firstName;

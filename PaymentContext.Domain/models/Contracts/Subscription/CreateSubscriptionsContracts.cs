@@ -7,7 +7,8 @@ namespace PaymentContext.Domain.models.Contracts.Subscription
         public CreateSubscriptionsContracts(Subscriptions subscriptions)
         { 
              Requires()
-                .IsNull(subscriptions.ExpireDate, "Subscriptions.ExpireDate", "Data de expiração é inválida");
+                .IsNotNull(subscriptions.ExpireDate, "Subscriptions.ExpireDate", "Data de expiração é inválida")
+                .IsLowerOrEqualsThan( DateTime.UtcNow, subscriptions.ExpireDate, "Payment.PaidDate", "A data de expiração não pode ser menor ou igual a data atual");
         }
     }
 }

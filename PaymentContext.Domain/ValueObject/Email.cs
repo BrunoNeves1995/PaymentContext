@@ -13,12 +13,8 @@ namespace PaymentContext.Domain.ValueObject
             AddNotifications(new CreateEmailContract(this));
         }
 
-        private IReadOnlyCollection<Notification> CreateEmailContract(Email email)
-        {
-            throw new NotImplementedException();
-        }
 
-        public string Address { get; private set; } = null!;
+        public string Address { get; private set; }
 
         public void AlterarEmail(string address)
         {

@@ -7,7 +7,7 @@ namespace PaymentContext.Domain.ValueObject.Contracts.Emails
         public CreateEmailContract(Email email)
         {
             Requires()
-                .IsEmail(email.Address, "email.Address", "E-mail invalido");
+                .IsEmail(email.Address, "Email.Address", "E-mail invalido");
         }
     }
 }

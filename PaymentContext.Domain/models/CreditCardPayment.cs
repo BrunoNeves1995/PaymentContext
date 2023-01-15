@@ -34,8 +34,8 @@ namespace PaymentContext.Domain.models
             AddNotifications(new CreateCredCardPaymentContract(this));
         }
 
-        public string CardHolderName { get; private set; } = null!;
-        public string CardNumber { get; private set; } = null!;
-        public string LastTransactionNumber { get; private set; } = null!;
+        public string CardHolderName { get; private set; }
+        public string CardNumber { get; private set; }
+        public string LastTransactionNumber { get; private set; }
     }
 }

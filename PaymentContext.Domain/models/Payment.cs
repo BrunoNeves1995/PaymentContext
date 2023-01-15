@@ -29,14 +29,14 @@ namespace PaymentContext.Domain.models
             AddNotifications(new CreatePaymentContract(this));
         }
 
-        public string Number { get; private set; } = null!;
+        public string Number { get; private set; }
         public DateTime PaidDate { get; private set; }
         public DateTime ExpireDate { get; private set; }
         public decimal Total { get; private set; }
         public decimal TotalPaid { get; private set; }
-        public string NamePayer { get; private set; } = null!;
+        public string NamePayer { get; private set; }
         public Document Document { get; private set; }
-        public Addres Address { get; private set; }  = null!;
-        public Email Email { get; private set; }  = null!;
+        public Addres Address { get; private set; }
+        public Email Email { get; private set; }
     }
 }

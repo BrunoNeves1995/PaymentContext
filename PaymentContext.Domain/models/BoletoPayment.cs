@@ -32,7 +32,7 @@ namespace PaymentContext.Domain.models
             AddNotifications(new CreateBoletoPaymentContract(this));
         }
 
-        public string BarCode { get; private set; } = null!;
-        public string BoletoNumber { get; private set; } = null!;
+        public string BarCode { get; private set; }
+        public string BoletoNumber { get; private set; }
     }
 }
