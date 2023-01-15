@@ -141,3 +141,12 @@
   
    ### Repository Pattern
    
+   - Repository Fake
+   
+          public interface IStudentReposository
+          {
+              bool DocumentExists(string document);
+              bool EmailExists(string document);
+
+              public void CreateSubscription(Student student);
+          }
