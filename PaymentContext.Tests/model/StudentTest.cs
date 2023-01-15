@@ -24,7 +24,7 @@ namespace PaymentContext.Tests.model
              _document = new Document("04778440145", EDocumentType.CPF);
              _email = new Email("nevesbruno814@gmail.com");
              _address = new Addres("Rua 1", "200", "Barro 1", "Mirasssol", "Barsil", "MT", "78280-000");
-             _student = new Student(_name, _document, _email, _address);
+             _student = new Student(_name, _document, _email);
 
             // Gerando um assinatura
             _subscription = new Subscriptions(DateTime.UtcNow.AddYears(1));

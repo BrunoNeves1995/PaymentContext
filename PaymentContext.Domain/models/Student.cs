@@ -9,12 +9,12 @@ namespace PaymentContext.Domain.models
     public class Student : Model
     {
         private IList<Subscriptions> _subscriptions;
-        public Student(Name name, Document document, Email email, Addres addres)
+        public Student(Name name, Document document, Email email)
         {
             Name = name;
             Document = document;
             Email = email;
-            Address = addres;
+    
             _subscriptions = new List<Subscriptions>();
         }
 
@@ -23,7 +23,7 @@ namespace PaymentContext.Domain.models
         public Name Name { get; private set; }
         public Document Document { get; private set; }
         public Email Email { get; private set; }
-        public Addres Address { get; private set; }
+        public Addres? Address { get; private set; }
         // public bool HasActiveSubscription { get; private set; }
 
         public IReadOnlyCollection<Subscriptions> Subscriptions { get { return _subscriptions.ToArray(); } }
