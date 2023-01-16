@@ -79,8 +79,9 @@
 
   ### Command
   
-  - Command -> Sâo informaçoes que recebemos de json que contem as informações necessarias para criação de qualquer objeto
-  - Todos as informções que precisamos para criar algo fica tudo dentro de uma classe
+  - Command 
+  - É a junção de todas as informações que a gente precisa para criar um subscription
+  - São objeto de transporte, passage, de uma camada para a outra 
   - Todas as classe Devem implementar [Notifiable<Notification>, ICommand]
   
           public class CreateBoletoSubscriptionCommand  : Notifiable<Notification>, ICommand
