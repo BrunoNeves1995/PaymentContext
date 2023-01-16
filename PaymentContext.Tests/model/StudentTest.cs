@@ -27,8 +27,8 @@ namespace PaymentContext.Tests.model
              _student = new Student(_name, _document, _email);
 
             // Gerando um assinatura
-            _subscription = new Subscriptions(DateTime.UtcNow.AddYears(1));
-            _subscription1 = new Subscriptions(DateTime.UtcNow.AddYears(2));
+            _subscription = new Subscriptions(DateTime.UtcNow.AddMonths(1));
+            _subscription1 = new Subscriptions(DateTime.UtcNow.AddMonths(1));
 
             
         }

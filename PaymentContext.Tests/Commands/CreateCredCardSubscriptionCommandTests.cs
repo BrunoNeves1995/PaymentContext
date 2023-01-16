@@ -3,14 +3,14 @@ using PaymentContext.Domain.Commands;
 namespace PaymentContext.Tests.Commands
 {
     [TestClass]
-    public class CreateBoletoSubscriptionCommandTests
+    public class CreateCredCardSubscriptionCommandTests
     {
         // Comand que nao testaria, apenas como exemplo
         
         [TestMethod]
-        public void DeveRetornaUmErroSequalquerInformacaoDoBoletoEstiverInvalida()
+        public void DeveRetornaUmErroSequalquerInformacaoDoCredCardEstiverInvalida()
         {
-            var Command = new CreateBoletoSubscriptionCommand();
+            var Command = new CreateCredCardSubscriptionCommand();
             Command.FirstName = "";
             Command.Validate();
 
@@ -18,9 +18,9 @@ namespace PaymentContext.Tests.Commands
         }
 
         [TestMethod]
-        public void DeveRetornaSucessoQaundoTodasAsImformacoesDoBoletoEstiverValida()
+        public void DeveRetornaSucessoQaundoTodasAsImformacoesDoCredCardEstiverValida()
         {
-            var Command = new CreateBoletoSubscriptionCommand();
+            var Command = new CreateCredCardSubscriptionCommand();
             Command.FirstName = "Bruno";
             Command.Validate();
             

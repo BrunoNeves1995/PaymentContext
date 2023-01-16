@@ -7,29 +7,29 @@ namespace PaymentContext.Domain.Commands
 {
     public class CreateBoletoSubscriptionCommand  : Notifiable<Notification>, ICommand
     {   
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-        public string? Number { get; set; }
-        public string? Email { get; set; }
+        public string FirstName { get; set; } = null!;
+        public string LastName { get; set; } = null!;
+        public string Number { get; set; } = null!;
+        public string Email { get; set; } = null!;
 
-        public string? BarCode { get; private set; }
-        public string? BoletoNumber { get; private set; }
+        public string BarCode { get; private set; } = null!;
+        public string BoletoNumber { get; private set; } = null!;
 
-        public string? PaymentNumber { get; set; }
-        public DateTime PaidDate { get; set; }
+        public string PaymentNumber { get; set; } = null!;
+        public DateTime PaidDate { get; set; } 
         public DateTime ExpireDate { get; set; }
-        public decimal Total { get; set; }
-        public decimal TotalPaid { get; set; }
-        public string? NamePayer { get; set; }
-        public string? PayerDocument { get; set; }
-        public string? DocumentType { get; set; }
-        public string? Street { get; private set; }
-        public string? NumberCasa { get; private set; }
-        public string? Neighborhood { get; private set; }
-        public string? City { get; private set; }
-        public string? State { get; private set; }
-        public string? Country { get; private set; }
-        public string? ZipCode { get; private set; }
+        public decimal Total { get; set; } 
+        public decimal TotalPaid { get; set; } 
+        public string NamePayer { get; set; } = null!;
+        public string Document { get; set; } = null!; 
+        public EDocumentType DocumentType { get; set; }
+        public string Street { get; private set; } = null!;
+        public string NumberCasa { get; private set; } = null!;
+        public string Neighborhood { get; private set; } = null!;
+        public string City { get; private set; } = null!;
+        public string State { get; private set; } = null!;
+        public string Country { get; private set; } = null!;
+        public string ZipCode { get; private set; } = null!;
 
         public void Validate()
         {
@@ -47,8 +47,8 @@ namespace PaymentContext.Domain.Commands
                 // .IsNotNull(ExpireDate, "PaidDate", "Data de expiração é inválido")
                 // .IsNotNull(Total, "Total", "Total é inválido")
                 // .IsNotNull(TotalPaid, "TotalPaid", "Total pago é inválido")
-                // .IsNotNullOrEmpty(PayerDocument, "PayerDocument", "CPF é inválido")
-                // .IsNotNullOrEmpty(DocumentType, "PayerDocument", "CPF é inválido")
+                // .IsNotNullOrEmpty(Document, "Document", "CPF é inválido")
+                // .IsNotNull(DocumentType, "PayerDocument", "CPF é inválido")
                 // .IsNotNullOrEmpty(Street, "Street", "Rua é inválido")
                 // .IsNotNullOrEmpty(NumberCasa, "NumberCasa", "Numero da casa é inválido")
                 // .IsNotNullOrEmpty(Neighborhood, "Neighborhood", "Bairro é inválido")
