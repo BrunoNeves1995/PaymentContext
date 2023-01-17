@@ -9,8 +9,7 @@ namespace PaymentContext.Domain.Repositories
     public interface IStudentReposository
     {
         bool DocumentExists(string document);
-        bool EmailExists(string document);
-
+        bool EmailExists(string email);
         public void CreateSubscription(Student student);
     }
 }

@@ -30,7 +30,8 @@ namespace PaymentContext.Domain.Handlers
         {
             // Fail, Fast Validation
             command.Validate();
-            if(command.IsValid)
+
+            if(!command.IsValid)
             {   
                 AddNotifications(command);
                 return new CommandResult(false, "Não foi possivel realizar sua assinatura");
@@ -41,7 +42,7 @@ namespace PaymentContext.Domain.Handlers
                 AddNotification("Document", "Esse CPF já está cadastrado");
 
             // verificar se o email ja esta cadastrado
-            if(_repository.DocumentExists(command.Email))
+            if(_repository.EmailExists(command.Email))
                 AddNotification("Email", "Esse E-mail já está cadastrado");
 
             // Gerar os Vos
@@ -72,6 +73,10 @@ namespace PaymentContext.Domain.Handlers
             
             // Agrupar as validações
                 AddNotifications(name, document, email, address, student, subscription, payment);
+
+            // Checa as Validações
+            if(!IsValid)
+                return new CommandResult(false, "Não foi possivel realizar sua assinatura");
 
             // salvar as informações
             _repository.CreateSubscription(student);
