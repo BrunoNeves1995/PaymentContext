@@ -159,7 +159,7 @@ namespace PaymentContext.Domain.Handlers
                 AddNotification("Document", "Esse CPF já está cadastrado");
 
             // verificar se o email ja esta cadastrado
-            if(_repository.DocumentExists(command.Email))
+            if(_repository.EmailExists(command.Email))
                 AddNotification("Email", "Esse E-mail já está cadastrado");
 
             // Gerar os Vos
