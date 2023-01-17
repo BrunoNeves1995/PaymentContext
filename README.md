@@ -161,3 +161,15 @@
 
               public void CreateSubscription(Student student);
           }
+  
+ ### Queries
+  
+       public static class StudentQueries
+        {   
+            // Exemplo de expression
+
+            public static Expression<Func<Student, bool>> GetStudentInfo(string document)
+            {
+                return x => x.Document.Number == document;
+            }
+        }
